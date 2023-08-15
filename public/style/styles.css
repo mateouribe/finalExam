@@ -33,7 +33,7 @@ main {
 }
 
 .product {
-  width: 49%;
+  width: 32%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -88,6 +88,19 @@ main {
   color: #b1004e;
 }
 
+.product:nth-child(3) .product-price-container {
+  color: #ff862a;
+}
+
+.product:nth-child(3) {
+  background-color: #ff862a;
+}
+
+.product:nth-child(3) h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #bb5100;
+}
 form {
   width: 100%;
   height: calc(50% - 40px);
@@ -106,14 +119,14 @@ form h2 {
 
 .inputs-container {
   width: 100%;
-  display: flex;
-  gap: 5px;
+  flex-shrink: initial;
 }
 
 label {
   font-size: 14px;
   font-weight: 400;
   width: 100%;
+  margin-right: 10px;
 }
 label input,
 select {

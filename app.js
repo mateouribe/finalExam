@@ -21,6 +21,7 @@ const orderSchema = new mongoose.Schema({
   postalCode: String,
   berryQuantity: Number,
   appleQuantity: Number,
+  peachQuantity: Number,
   subtotal: Number,
   taxes: Number,
   total: Number,
@@ -76,11 +77,13 @@ app.post("/submit", async (req, res) => {
   //   Calculate subtotal and taxes
   const berryQuantity = parseInt(orderData.berry) || 0;
   const appleQuantity = parseInt(orderData.apple) || 0;
+  const peachQuantity = parseInt(orderData.peach) || 0;
 
-  const berrySubtotal = berryQuantity * 25;
-  const appleSubtotal = appleQuantity * 20;
+  const berrySubtotal = berryQuantity * 3.99;
+  const appleSubtotal = appleQuantity * 2.99;
+  const peachSubtotal = peachQuantity * 3.49;
 
-  const subtotal = berrySubtotal + appleSubtotal;
+  const subtotal = berrySubtotal + appleSubtotal + peachSubtotal;
   const taxes = calculateTaxes(subtotal, orderData.province);
 
   // Calculate total
@@ -95,6 +98,7 @@ app.post("/submit", async (req, res) => {
     postalCode: orderData.postalCode,
     berryQuantity: orderData.berry,
     appleQuantity: orderData.apple,
+    peachQuantity: orderData.peach,
     subtotal: subtotal,
     taxes: taxes,
     total: total,

@@ -13,7 +13,7 @@
         <div class="product">
           <div class="product-info">
             <div class="product-price-container">
-              <span>$20</span>
+              <span>$2.99</span>
             </div>
             <h3>Apple Juice</h3>
           </div>
@@ -23,12 +23,22 @@
         <div class="product">
           <div class="product-info">
             <div class="product-price-container">
-              <span>$20</span>
+              <span>$3.99</span>
             </div>
             <h3>Berry Juice</h3>
           </div>
 
           <img src="assets/berry.png" alt="3d illustration of apple juice" />
+        </div>
+        <div class="product">
+          <div class="product-info">
+            <div class="product-price-container">
+              <span>$3.49</span>
+            </div>
+            <h3>Peach Juice</h3>
+          </div>
+
+          <img src="assets/peach.png" alt="3d illustration of apple juice" />
         </div>
       </div>
       <form action="/submit" method="POST">
@@ -76,7 +86,10 @@
           </label>
           <label for="ipad">
             Berry juice:
-            <input name="berry" type="number" placeholder="How many?" />
+            <input name="berry" type="number" placeholder="How many?" /> </label
+          ><label for="ipad">
+            Peach juice:
+            <input name="peach" type="number" placeholder="How many?" />
           </label>
         </div>
         <button type="submit">Purchase</button>
