@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f1ee;
+  color: #2a3139;
+  padding: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container {
+  width: 100%;
+  height: calc(50% - 40px);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 50px;
+  border-radius: 20px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.product-price-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product:nth-child(1) .product-price-container {
+  color: #ffd000;
+}
+
+.product:nth-child(1) {
+  background-color: #ffd000;
+}
+
+.product:nth-child(1) h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #887007;
+}
+
+.product:nth-child(2) .product-price-container {
+  color: #ff79b4;
+}
+
+.product:nth-child(2) {
+  background-color: #ff79b4;
+}
+
+.product:nth-child(2) h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #b1004e;
+}
+
+form {
+  width: 100%;
+  height: calc(50% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+form h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.inputs-container {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+label input,
+select {
+  padding: 5px 10px;
+  border: 1px solid #c6c1be;
+  border-radius: 10px;
+}
+label input::placeholder,
+select::selection {
+  color: #c6c1be;
+}
+
+form button {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #00f0ff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
