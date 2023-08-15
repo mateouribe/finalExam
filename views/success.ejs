@@ -1,0 +1,35 @@
+<!-- views/receipt.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Receipt</title>
+    <link rel="stylesheet" type="text/css" href="/style/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/style/success.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="container">
+        <h2>Customer Details</h2>
+        <div>
+          <p>Name: <%= order.name %></p>
+          <p>Phone: <%= order.phone %></p>
+          <p>Address: <%= order.address %></p>
+          <p>City: <%= order.city %></p>
+          <p>Province: <%= order.province %></p>
+          <p>Postal code: <%= order.postalCode %></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Order Summary</h2>
+        <div>
+          <p>Apple juice Quantity: <%= order.appleQuantity %> - $20.00</p>
+          <p>Berry Quantity: <%= order.berryQuantity %> - $25.00</p>
+          <p>Subtotal: $<%= order.subtotal.toFixed(2) %></p>
+          <p>Taxes: $<%= order.taxes.toFixed(2) %></p>
+          <p>Total: $<%= order.total.toFixed(2) %></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
