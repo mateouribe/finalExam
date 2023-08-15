@@ -78,7 +78,7 @@ app.post("/submit", async (req, res) => {
   const berryQuantity = parseInt(orderData.berry) || 0;
   const appleQuantity = parseInt(orderData.apple) || 0;
 
-  const berrySubtotal = berryQuantity * 10;
+  const berrySubtotal = berryQuantity * 25;
   const appleSubtotal = appleQuantity * 20;
 
   const subtotal = berrySubtotal + appleSubtotal;
