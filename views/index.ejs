@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style/styles.css" />
+  </head>
+  <body>
+    <h1>Juice Now!</h1>
+    <main>
+      <div class="product-container">
+        <div class="product">
+          <div class="product-info">
+            <div class="product-price-container">
+              <span>$20</span>
+            </div>
+            <h3>Apple Juice</h3>
+          </div>
+
+          <img src="assets/apple.png" alt="3d illustration of apple juice" />
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="/submit" method="POST">
+          <h2>Purchase form</h2>
+          <div class="inputs-container">
+            <label for="name">
+              Name*:
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+            <label for="phone">
+              Phone*:
+              <input type="number" name="phone" placeholder="12312341234" />
+            </label>
+            <label for="address">
+              Address*:
+              <input type="text" name="address" placeholder="Your address" />
+            </label>
+            <label for="postalCode">
+              Postal code*:
+              <input type="text" name="postalCode" placeholder="A1A1A1" />
+            </label>
+            <label for="province"
+              >Province*:
+              <select name="province" id="province">
+                <option value="">Select Province/Territory</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NU">Nunavut</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
+              </select>
+            </label>
+            <label for="apple">
+              Apple juice:
+              <input name="apple" placeholder="How many?" />
+            </label>
+            <label for="ipad">
+              Berry juice:
+              <input name="berry" placeholder="How many?" />
+            </label>
+          </div>
+          <button type="submit">Purchase</button>
+          <!-- <a href="/orders">View orders</a> -->
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
