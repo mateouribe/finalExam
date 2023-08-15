@@ -1,0 +1,11 @@
+tr th {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+tr td {
+  color: #928d8a;
+  font-size: 14px;
+  padding: 0 10px;
+}

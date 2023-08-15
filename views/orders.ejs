@@ -1,0 +1,40 @@
+<!-- views/orders.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orders</title>
+    <link rel="stylesheet" type="text/css" href="/style/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/style/orders.css" />
+  </head>
+  <body>
+    <h1>Orders</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Province</th>
+        <th>Postal code</th>
+        <th>Apple juice quantity</th>
+        <th>Berry juice quantity</th>
+        <th>Subtotal</th>
+        <th>Taxes</th>
+        <th>Total</th>
+      </tr>
+      <% orders.forEach(order => { %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.address %></td>
+        <td><%= order.province %></td>
+        <td><%= order.postalCode %></td>
+        <td><%= order.appleQuantity %></td>
+        <td><%= order.berryQuantity%></td>
+        <td><%= order.subtotal.toFixed(2) %></td>
+        <td><%= order.taxes.toFixed(2) %></td>
+        <td><%= order.total.toFixed(2) %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>
